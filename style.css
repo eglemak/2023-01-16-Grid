@@ -1,0 +1,106 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 30px;
+    background-color: hsl(0, 0%, 81%);
+    font-size: 13px;
+    /* background-image: url('https://raw.githubusercontent.com/frontendmentorio/testimonials-grid-section/main/images/favicon-32x32.png');
+    background-repeat: no-repeat; */
+}
+
+.content-wrapper {
+    background-color: hsl(210, 46%, 95%);
+    margin: 50px;
+    padding: 100px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "Daniel   Daniel  Jonathan Kira"
+                         "Jeanette Patrick Patrick  Kira";
+    gap: 30px;
+}
+
+.list-item {
+    /* margin: 15px; */
+    padding: 30px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.dark {
+    color: white;
+}
+
+.list .list-item:nth-child(1) {
+    background-color: hsl(263, 55%, 52%);
+    /* grid-column: span 2; */
+    grid-area: Daniel;
+
+    background-image: url('https://raw.githubusercontent.com/frontendmentorio/testimonials-grid-section/main/images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 35% 50%;
+    background-position: 80% 0;
+   
+}
+
+.list .list-item:nth-child(2) {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: Jonathan
+}
+
+.list .list-item:nth-child(3) {
+    background-color: hsl(0, 0%, 100%);
+    /* grid-row: span 2; */
+    grid-area: Kira;
+}
+
+.list .list-item:nth-child(4) {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: Jeanette;
+}
+
+.list .list-item:nth-child(5) {
+    background-color: hsl(219, 29%, 14%);
+    /* grid-column: span 2; */
+    grid-area: Patrick;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.top .image-wrapper img {
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.top .name-wrapper {
+    padding: 20px;
+}
+
+.top .name-wrapper .name {
+    display: block;
+}
+
+.top .name-wrapper .graduate {
+    opacity: 50%;
+}
+
+.bottom .summary {
+    font-weight: 600;
+}
+
+.bottom .description {
+    opacity: 70%;
+}
+
+
